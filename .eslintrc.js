@@ -25,7 +25,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'linebreak-style': 'off',
-    'no-param-reassign': 'off'
-    /* 'prettier/prettier': 'error', */
+    'no-param-reassign': 'off',
+    'prettier/prettier': 'error',
   },
 };

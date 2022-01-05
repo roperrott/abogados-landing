@@ -1,27 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Theme } from './config/mui/MuiTheme';
 
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#7ED320',
-      contrastText: '#FFFFFF',
-    },
-    background: {
-      paper: '#7ED320',
-      default: '#7ED320',
-    }
-  },
-});
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
       <App />
     </ThemeProvider>
   </React.StrictMode>,
