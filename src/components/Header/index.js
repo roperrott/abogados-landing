@@ -3,7 +3,7 @@ import { Logo } from '../Logo';
 
 export function Header() {
     return (
-        <AppBar color='inherit'>
+        <AppBar color='inherit' position='sticky'>
             <Toolbar>
                 <Logo/>
                 <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
