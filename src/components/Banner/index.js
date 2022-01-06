@@ -14,7 +14,7 @@ export function Banner() {
                 letterSpacing: '0px',
                 color: '#FFFFFF'
                 }}>
-                Asesoramiento online
+                ASESORAMIENTO ONLINE
             </Typography>
         </Box>
     )
