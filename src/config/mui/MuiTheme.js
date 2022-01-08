@@ -34,11 +34,7 @@ export const Theme = createTheme({
       }
     },
     typography: {
-      fontFamily: [
-        'Poppins',
-        'Helvetica',
-        'Arial',
-        'sans-serif'
-      ].join(','),
+      fontFamily: "'Poppins','Helvetica', 'Arial', sans-serif'"
+      
     }
   });

@@ -4,8 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Theme } from './config/mui/MuiTheme';
-
-
+import './index.css'
 
 ReactDOM.render(
   <React.StrictMode>

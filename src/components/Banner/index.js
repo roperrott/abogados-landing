@@ -6,14 +6,7 @@ import './index.css';
 export function Banner() {
     return(
         <Box className='banner'>
-            <Typography sx={{
-                width: '1266px',
-                height: '145px',
-                textAlign: 'left',
-                font: 'Poppins',
-                letterSpacing: '0px',
-                color: '#FFFFFF'
-                }}>
+            <Typography variant='h2'>
                 ASESORAMIENTO ONLINE
             </Typography>
         </Box>

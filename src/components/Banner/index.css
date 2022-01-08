@@ -1,7 +1,7 @@
 .banner{
     position: relative; 
     width: 100%;
-    aspect-ratio: 19.06/8.05;
+    aspect-ratio: 64/27;
     background-image: url('../../assets/banner_principal.png');
     background-repeat: no-repeat;
     background-size: contain;
