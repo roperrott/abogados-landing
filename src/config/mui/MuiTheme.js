@@ -31,7 +31,7 @@ export const Theme = createTheme({
             }
           }
         }
-      }
+      },
     },
     typography: {
       fontFamily: [
@@ -40,5 +40,12 @@ export const Theme = createTheme({
         'Arial',
         'sans-serif'
       ].join(','),
-    }
+      h1: {
+        fontWeight: 600,
+      },
+      h4: {
+        fontFamily: 'Helvetica',
+        fontSize: 25,
+      }
+    },
   });
