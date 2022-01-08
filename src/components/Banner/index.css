@@ -5,6 +5,10 @@
     background-image: url('../../assets/banner_principal.png');
     background-repeat: no-repeat;
     background-size: contain;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .banner::after {
     content: "";
@@ -16,4 +20,14 @@
     bottom: 0;
     right: 0;
     z-index: 1;
+}
+
+.banner-container{
+    z-index: 2;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+
 }
