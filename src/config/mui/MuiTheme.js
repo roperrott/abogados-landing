@@ -4,18 +4,18 @@ export const Theme = createTheme({
   palette: {
     primary: {
       main: '#FFFFFF',
-      contrastText: '#333333',
+      contrastText: '#333333'
     },
     secondary: {
       main: '#333333',
-      contrastText: '#FFFFFF',
+      contrastText: '#FFFFFF'
     },
     success: {
-      main: '#7ED320',
+      main: '#7ED320'
     },
     background: {
       paper: '#7ED320',
-      default: '#EFEFEF94',
+      default: '#EFEFEF94'
     }
   },
   components: {
@@ -34,24 +34,55 @@ export const Theme = createTheme({
           }
         },
         contained: {
-          borderRadius: '19px',
+          borderRadius: 19,
           border: '1px solid #707070',
           '&.MuiButton-containedSizeMedium': {
-            height: '80px',
+            height: 80,
             padding: '0px 86px',
-            fontSize: '35px'
+            fontSize: 35
           },
           '&.MuiButton-containedSizeLarge': {
-            height: '107px',
+            height: 107,
             padding: '0px 32px',
-            fontSize: '35px',
-            borderRadius: '10px',
+            fontSize: 35,
+            borderRadius: 10,
             boxShadow: '0px 3px 6px #00000029',
+            border: 'none'
+          },
+          '&.MuiButton-containedSizeSmall': {
+            height: 47.6,
+            borderRadius: 21,
+            fontSize: 14.7,
+            fontWeight: 600,
             border: 'none',
+            color: '#FFFFFF',
+            padding: '0px 14px'
           }
         }
       }
     },
+    MuiSvgIcon: {
+      root:{
+        '&.MuiButton-startIcon':{
+          fontSize: 23
+        }
+      }
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#FFFFFF',
+          width: 365,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          boxShadow: '0px 3px 6px #00000029',
+          borderRadius: 89.6,
+          paddingBottom: 23.8,
+          marginTop: 40
+        }
+      }
+    }
   },
   typography: {
     fontFamily: [
@@ -62,15 +93,33 @@ export const Theme = createTheme({
     ].join(','),
     h1: {
       fontWeight: 600,
-      fontSize: '70px',
+      fontSize: 70
     },
     h2:{
       fontWeight: 600,
-      fontSize: '50px',
+      fontSize: 50
+    },
+    h3:{
+      fontWeight: 700,
+      fontSize: 47
     },
     h4: {
       fontFamily: 'Helvetica',
-      fontSize: 18,
+      fontSize: 18
     },
-  },
+    h5: {
+      fontWeight: 500,
+      fontSize: 33
+    },
+    body1: {
+      fontWeight: 400,
+      fontSize: 34
+    },
+    body2: {
+      fontFamily: 'Lato',
+      fontSize: 19.6,
+      color: '#707070',
+      textAlign: 'center'
+    }
+  }
 });
