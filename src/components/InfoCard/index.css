@@ -1,0 +1,10 @@
+.card-icon{
+    width: 106px;
+    height: 106px;
+}
+
+.card-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
