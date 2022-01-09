@@ -1,0 +1,39 @@
+.banner{
+    position: relative; 
+    width: 100%;
+    aspect-ratio: 64/27;
+    background-image: url('../../assets/banner_principal.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.banner::after {
+    content: "";
+    background: #171717;
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.banner-container{
+    z-index: 2;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+}
+
+.news-icon{
+    width: 71px;
+    height: 69px;
+    filter: invert(86%) sepia(69%) saturate(2575%) hue-rotate(28deg) brightness(88%) contrast(86%);
+    margin-right: 32px;
+}
