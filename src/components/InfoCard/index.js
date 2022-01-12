@@ -3,13 +3,13 @@ import fireImg from './../../assets/fired.png';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import './index.css';
 
-export function InfoCard( { icon, title, content } ) {
+export function InfoCard( { icon, title, content, className } ) {
     return(
         <Card>
-            <CardHeader
+            <CardHeader sx={{ flexGrow: 1 }}
                 title= {
                     <div className='card-header'>
-                        <img src={icon} className='card-icon' />
+                        <img className={className} src={icon} />
                         <Typography variant='h5' color='secondary'>{title}</Typography>
                     </div>
                 }  

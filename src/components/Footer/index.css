@@ -1,0 +1,11 @@
+.footer-container{
+    background-color: #707070;
+    display: flex;
+    padding:47px 64.4px;
+    justify-content: space-between;
+}
+
+.footer-img{
+    width: 222px;
+    height: 211px;
+}

@@ -31,6 +31,13 @@ export const Theme = createTheme({
           ':hover': {
             borderRadius: 0,
             borderWidth: 2,
+          },
+          '&.MuiButton-sizeLarge ': {
+            borderRadius: 9.8,
+            height: 57.5,
+            fontSize: 20,
+            borderWidth: 1,
+            fontWeight: 500
           }
         },
         contained: {
@@ -77,6 +84,7 @@ export const Theme = createTheme({
           flexDirection: 'column',
           alignItems: 'center',
           boxShadow: '0px 3px 6px #00000029',
+          justifyContent: 'baselined',
           borderRadius: 89.6,
           paddingBottom: 23.8,
           marginTop: 40
@@ -109,7 +117,8 @@ export const Theme = createTheme({
     },
     h5: {
       fontWeight: 500,
-      fontSize: 33
+      fontSize: 33,
+      color: '#333333'
     },
     body1: {
       fontWeight: 400,

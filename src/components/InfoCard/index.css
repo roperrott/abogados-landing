@@ -1,10 +1,37 @@
-.card-icon{
+.fired{
     width: 106px;
     height: 106px;
+}
+
+.compensation{
+    width: 63px;
+    height: 63px;
+}
+
+.informalWork{
+    width: 81.2px;
+    height: 81.2px;
+}
+
+.laborAbuse{
+    width: 117px;
+    height: 117px;
+}
+
+.accident{
+    width: 80.5px;
+    height: 94.5px;
+}
+
+.extraHours{
+    width: 110px;
+    height: 95.3px; 
 }
 
 .card-header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 141px;
+    justify-content: flex-end;
 }

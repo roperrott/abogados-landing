@@ -7,7 +7,7 @@ export function CardsContainer() {
     return(
         <Box className='cards-container' sx={{ m: '40px 64px'}}>
             {
-                cardsData.map( (data) => <InfoCard {...data} />)
+                cardsData.map( (data, index) => <InfoCard key={index} {...data} />)
             }
         </Box>
     )
