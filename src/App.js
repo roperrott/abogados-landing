@@ -7,15 +7,15 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div style={{backgroundColor: '#EFEFEF94'}}>
-      <Header/>
+    <div style={{ backgroundColor: '#EFEFEF94' }}>
+      <Header />
       <Banner />
-      <PageContent/>
-      <CardsContainer/>
-      <Form/>
-      <Footer/>
+      <PageContent />
+      <CardsContainer />
+      <Form />
+      <Footer />
     </div>
-    
+
   );
 }
 
