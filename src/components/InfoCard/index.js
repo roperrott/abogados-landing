@@ -5,15 +5,14 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import './index.css';
 
 export function InfoCard({
-  icon, title, content, className,
+  icon, title, content,
 }) {
   return (
     <Card>
       <CardHeader
-        sx={{ flexGrow: 1 }}
         title={(
           <div className="card-header">
-            <img className={className} src={icon} alt="className" />
+            <img className="header-icon" src={icon} alt="card-icon" />
             <Typography variant="h5" color="secondary">{title}</Typography>
           </div>
                   )}
