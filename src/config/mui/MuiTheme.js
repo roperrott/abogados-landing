@@ -19,6 +19,33 @@ export const Theme = createTheme({
     },
   },
   components: {
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          position: 'relative',
+          paddingBottom: 20,
+          paddingLeft: 10,
+          fontWeight: 600,
+          fontSize: 21.7,
+          color: '#333333',
+          transform: 'none',
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          required: true,
+          borderRadius: 61.8,
+          height: 77,
+          width: 520,
+          border: '1px solid #707070',
+          '&.MuiInputBase-inputMultiline': {
+            height: 258,
+          },
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         outlined: {
