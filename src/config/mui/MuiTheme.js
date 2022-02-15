@@ -19,6 +19,55 @@ export const Theme = createTheme({
     },
   },
   components: {
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          position: 'relative',
+          paddingBottom: 20,
+          paddingLeft: 10,
+          fontWeight: 600,
+          fontSize: 21.7,
+          color: '#333333',
+          transform: 'none',
+          '&.Mui-focused': {
+            color: '#333333',
+          },
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          width: '48%',
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          required: true,
+          height: 77,
+          fontSize: '23px',
+          border: '1px solid #707070',
+          '&.MuiOutlinedInput-root': {
+            borderRadius: 60,
+          },
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        input: {
+          padding: '16px 20px',
+        },
+        multiline: {
+          height: 258,
+        },
+        notchedOutline: {
+          border: 'none',
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         outlined: {
