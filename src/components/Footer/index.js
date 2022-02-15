@@ -71,7 +71,7 @@ export function Footer() {
             fontSize: 19, fontWeight: 500, color: '#FFFFFF', textAlign: 'left', mb: 3,
           }}
         >
-          ( Tandil, Azul Olavarría, Mar del Plata, Necochea, Dolores, Balcarce y ciudades aledañas).
+          (Tandil, Azul Olavarría, Mar del Plata, Necochea, Dolores, Balcarce y ciudades aledañas).
         </Typography>
         <Button variant="outlined" size="large" endIcon={<WhatsappTwoToneIcon style={{ fontSize: 25 }} />}>CONTACTANOS</Button>
       </Box>

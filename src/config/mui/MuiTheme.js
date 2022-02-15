@@ -29,20 +29,42 @@ export const Theme = createTheme({
           fontSize: 21.7,
           color: '#333333',
           transform: 'none',
+          '&.Mui-focused': {
+            color: '#333333',
+          },
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          width: '48%',
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          required: true,
+          height: 77,
+          fontSize: '23px',
+          border: '1px solid #707070',
+          '&.MuiOutlinedInput-root': {
+            borderRadius: 60,
+          },
         },
       },
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        root: {
-          required: true,
-          borderRadius: 61.8,
-          height: 77,
-          width: 520,
-          border: '1px solid #707070',
-          '&.MuiInputBase-inputMultiline': {
-            height: 258,
-          },
+        input: {
+          padding: '16px 20px',
+        },
+        multiline: {
+          height: 258,
+        },
+        notchedOutline: {
+          border: 'none',
         },
       },
     },

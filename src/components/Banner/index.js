@@ -14,7 +14,7 @@ export function Banner() {
           <Typography variant="h2" color="primary">
             Conocé tus derechos
           </Typography>
-          <Button color="secondary" variant="contained" size="medium">
+          <Button color="secondary" variant="contained" size="medium" href="#contact-form">
             CONTACTANOS
           </Button>
         </Box>

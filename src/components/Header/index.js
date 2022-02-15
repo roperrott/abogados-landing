@@ -5,7 +5,7 @@ import { Logo } from '../Logo';
 
 export function Header() {
   return (
-    <AppBar color="inherit" position="sticky">
+    <AppBar color="inherit" position="sticky" sx={{ height: 80, justifyContent: 'center' }}>
       <Toolbar>
         <Logo />
         <Typography variant="h4" component="div" color="primary" sx={{ flexGrow: 1 }}>
