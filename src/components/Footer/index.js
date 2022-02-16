@@ -1,7 +1,10 @@
-import { Box, Button, Typography } from '@mui/material';
+import {
+  Box, Button, List, ListItem, ListItemText, Typography,
+} from '@mui/material';
 import WhatsappTwoToneIcon from '@mui/icons-material/WhatsappTwoTone';
 import logo from '../../assets/logo.svg';
 import './index.css';
+import { itemsListData } from '../../data/itemsListData';
 
 export function Footer() {
   return (
@@ -15,46 +18,13 @@ export function Footer() {
         >
           SOMOS ESPECIALISTAS EN
         </Typography>
-        <Typography
-          paragraph
-          sx={{
-            fontSize: 21.7, fontWeight: 600, color: '#FFFFFF', textAlign: 'left', mb: 0,
-          }}
-        >
-          Derecho laboral
-        </Typography>
-        <Typography
-          paragraph
-          sx={{
-            fontSize: 21.7, fontWeight: 600, color: '#FFFFFF', textAlign: 'left', mb: 0,
-          }}
-        >
-          Indemnización por despido
-        </Typography>
-        <Typography
-          paragraph
-          sx={{
-            fontSize: 21.7, fontWeight: 600, color: '#FFFFFF', textAlign: 'left', mb: 0,
-          }}
-        >
-          Maltrato laboral
-        </Typography>
-        <Typography
-          paragraph
-          sx={{
-            fontSize: 21.7, fontWeight: 600, color: '#FFFFFF', textAlign: 'left', mb: 0,
-          }}
-        >
-          Diferencias salariales
-        </Typography>
-        <Typography
-          paragraph
-          sx={{
-            fontSize: 21.7, fontWeight: 600, color: '#FFFFFF', textAlign: 'left', mb: 0,
-          }}
-        >
-          Trabajo insalubre
-        </Typography>
+        <List>
+          {itemsListData.map((list) => (
+            <ListItem disablePadding key={list.item}>
+              <ListItemText>{list.item}</ListItemText>
+            </ListItem>
+          ))}
+        </List>
       </Box>
       <Box sx={{ width: 490 }}>
         <Typography
@@ -68,12 +38,22 @@ export function Footer() {
         <Typography
           paragraph
           sx={{
-            fontSize: 19, fontWeight: 500, color: '#FFFFFF', textAlign: 'left', mb: 3,
+            fontSize: 17, fontWeight: 400, color: '#FFFFFF', textAlign: 'left', mb: 3,
           }}
         >
-          (Tandil, Azul Olavarría, Mar del Plata, Necochea, Dolores, Balcarce y ciudades aledañas).
+          Tandil, Azul, Olavarría, Mar del Plata, Necochea, Dolores, Balcarce y ciudades aledañas
         </Typography>
-        <Button variant="outlined" size="large" endIcon={<WhatsappTwoToneIcon style={{ fontSize: 25 }} />}>CONTACTANOS</Button>
+        <Button
+          href="https://wa.me/5492494025191"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="outlined"
+          size="large"
+          endIcon={<WhatsappTwoToneIcon style={{ fontSize: 25 }} />}
+        >
+          CONTACTANOS
+
+        </Button>
       </Box>
       <Box>
         <img src={logo} className="footer-img" alt="Logo abogados Web" />

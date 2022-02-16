@@ -98,7 +98,7 @@ export const Theme = createTheme({
             fontSize: 35,
           },
           '&.MuiButton-containedSizeLarge': {
-            height: 107,
+            minHeight: 107,
             padding: '0px 32px',
             fontSize: 35,
             borderRadius: 10,
@@ -172,6 +172,11 @@ export const Theme = createTheme({
     body1: {
       fontWeight: 400,
       fontSize: 34,
+      '&.MuiListItemText-primary': {
+        fontSize: 21,
+        fontWeight: 600,
+        color: '#FFFFFF',
+      },
     },
     body2: {
       fontFamily: 'Lato',
