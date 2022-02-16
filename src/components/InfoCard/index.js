@@ -21,7 +21,18 @@ export function InfoCard({
         <Typography variant="body2">{content}</Typography>
       </CardContent>
       <CardActions>
-        <Button variant="contained" color="success" size="small" startIcon={<WhatsAppIcon style={{ fontSize: 25 }} />}>CONSULTÁ GRATIS</Button>
+        <Button
+          href="https://wa.me/5492494025191"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="contained"
+          color="success"
+          size="small"
+          startIcon={<WhatsAppIcon style={{ fontSize: 25 }} />}
+        >
+          CONSULTÁ GRATIS
+
+        </Button>
       </CardActions>
     </Card>
 

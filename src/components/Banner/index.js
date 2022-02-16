@@ -1,5 +1,6 @@
 import { Box, Typography, Button } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Link } from 'react-router-dom';
 import news from '../../assets/newsIcon.png';
 import './index.css';
 
@@ -18,16 +19,17 @@ export function Banner() {
             CONTACTANOS
           </Button>
         </Box>
-        <Button
-          variant="contained"
-          size="large"
-          color="primary"
-          sx={{ zIndex: 2, position: 'absolute', bottom: -53.5 }}
-          startIcon={<img src={news} className="news-icon" alt="noticias" />}
-          endIcon={<ArrowForwardIosIcon fontSize="inherit" />}
-        >
-          NOTICIAS E INFORMACIÓN PARA EL TRABAJADOR
-        </Button>
+        <Link to="noticias" className="big-news-btn">
+          <Button
+            variant="contained"
+            size="large"
+            color="primary"
+            startIcon={<img src={news} className="news-icon" alt="noticias" />}
+            endIcon={<ArrowForwardIosIcon fontSize="inherit" />}
+          >
+            NOTICIAS E INFORMACIÓN PARA EL TRABAJADOR
+          </Button>
+        </Link>
       </Box>
     </Box>
 

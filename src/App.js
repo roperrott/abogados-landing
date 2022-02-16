@@ -1,20 +1,19 @@
-import { Banner } from './components/Banner';
-import { Header } from './components/Header';
-import { PageContent } from './components/PageContent';
-import { CardsContainer } from './components/CardsContainer';
-import { Form } from './components/Form';
-import { Footer } from './components/Footer';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import { Banner } from './components';
+import { Home } from './pages/home';
 
 function App() {
   return (
-    <div style={{ backgroundColor: '#EFEFEF94' }}>
-      <Header />
-      <Banner />
-      <PageContent />
-      <CardsContainer />
-      <Form />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="noticias" element={<Banner />} />
+      </Routes>
+    </Router>
 
   );
 }

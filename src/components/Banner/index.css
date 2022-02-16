@@ -37,3 +37,9 @@
     filter: invert(86%) sepia(69%) saturate(2575%) hue-rotate(28deg) brightness(88%) contrast(86%);
     margin-right: 32px;
 }
+
+.big-news-btn {
+    z-index: 2; 
+    position: absolute;
+    bottom: -53.5px;
+  }
