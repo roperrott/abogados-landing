@@ -1,10 +1,9 @@
 .banner{
     position: relative; 
     width: 100%;
-    aspect-ratio: 64/27;
-    background-image: url('../../assets/banner_principal.png');
+    height: 100vh;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -29,6 +28,10 @@
     align-items: center;
     justify-content: space-between;
     height: 250px;
+}
+
+.title-container {
+    text-align: center;
 }
 
 .news-icon{
