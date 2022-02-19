@@ -4,21 +4,28 @@ import { Link } from 'react-router-dom';
 import news from '../../assets/newsIcon.png';
 import './index.css';
 
-export function Banner() {
+export function Banner({
+  backgroundImage, showButton = false, title, subtitle,
+}) {
   return (
     <Box sx={{ position: 'relative' }}>
-      <Box className="banner">
+      <Box className="banner" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Box className="banner-container">
-          <Typography variant="h1" color="primary">
-            ASESORAMIENTO ONLINE
-          </Typography>
-          <Typography variant="h2" color="primary">
-            Conocé tus derechos
-          </Typography>
+          <Box className="title-container">
+            <Typography variant="h1" color="primary">
+              {title}
+            </Typography>
+            <Typography variant="h2" color="primary">
+              {subtitle}
+            </Typography>
+          </Box>
+          { showButton && (
           <Button color="secondary" variant="contained" size="medium" href="#contact-form">
             CONTACTANOS
           </Button>
+          )}
         </Box>
+        {showButton && (
         <Link to="noticias" className="big-news-btn">
           <Button
             variant="contained"
@@ -30,6 +37,7 @@ export function Banner() {
             NOTICIAS E INFORMACIÓN PARA EL TRABAJADOR
           </Button>
         </Link>
+        )}
       </Box>
     </Box>
 

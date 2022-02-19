@@ -1,5 +1,5 @@
 import {
-  Box, Typography, TextField, FormControl,
+  Box, Typography, TextField, FormControl, Button,
 } from '@mui/material';
 import './index.css';
 
@@ -12,7 +12,7 @@ export function Form() {
       <Box
         id="contact-form"
         sx={{
-          bgcolor: '#FFFFFF', alignItems: 'center', p: '78px 88px', m: '-346px 47.5px 0px', borderRadius: '92px', position: 'absolute',
+          bgcolor: '#FFFFFF', alignItems: 'center', p: '78px 88px 40px', m: '-346px 47.5px 0px', borderRadius: '92px', position: 'absolute', display: 'flex', flexDirection: 'column',
         }}
       >
         <Typography variant="h5" sx={{ textAlign: 'center' }}>COMPLETÁ EL FORMULARIO PARA QUE TE CONTACTEMOS</Typography>
@@ -20,7 +20,7 @@ export function Form() {
         <FormControl
           fullWidth
           sx={{
-            alignItems: 'center', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between',
+            alignItems: 'center', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', mb: '40px',
           }}
         >
           <TextField
@@ -66,6 +66,9 @@ export function Form() {
             style={{ width: '100%' }}
           />
         </FormControl>
+        <Button color="secondary" variant="contained" size="medium">
+          ENVIAR
+        </Button>
       </Box>
     </Box>
   );
