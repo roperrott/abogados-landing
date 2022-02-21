@@ -62,6 +62,7 @@ export function Form() {
               name="firstName"
               value={formik.values.firstName}
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               helperText={formik.touched.firstName && formik.errors.firstName}
             />
             <TextField
@@ -74,6 +75,7 @@ export function Form() {
               name="lastName"
               value={formik.values.lastName}
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               helperText={formik.touched.lastName && formik.errors.lastName}
             />
             <TextField
@@ -87,6 +89,7 @@ export function Form() {
               type="tel"
               value={formik.values.phone}
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               helperText={formik.touched.phone && formik.errors.phone}
             />
             <TextField
@@ -100,6 +103,7 @@ export function Form() {
               value={formik.values.mail}
               name="mail"
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               helperText={formik.touched.mail && formik.errors.mail}
             />
             <TextField
@@ -114,6 +118,7 @@ export function Form() {
               value={formik.values.content}
               name="content"
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               helperText={formik.touched.content && formik.errors.content}
             />
           </FormControl>
