@@ -5,7 +5,10 @@ import { NewsCard } from '../NewsCard';
 
 export function NewsCardContainer() {
   return (
-    <Box>
+    <Box sx={{
+      width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center',
+    }}
+    >
       {
             newsCardData.map((data) => <NewsCard key={data.title} {...data} />)
             }
