@@ -8,8 +8,9 @@ export const validationSchema = yup.object({
     .string('Ingresa tú apellido')
     .required('Apellido es un campo requerido'),
   phone: yup
-    .number('Ingresa tú telefono')
+    .string('Ingresa tú telefono')
     .min(10, 'El telefono debe tener al menos 10 números')
+    .matches(/^[0-9]+$/, 'Deben ser solo números')
     .required('Telefono es un campo requerido'),
   mail: yup
     .string('Enter your password')
