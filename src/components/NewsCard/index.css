@@ -1,0 +1,6 @@
+.news-card{
+    width: 1255px;
+    display: flex;
+    flex-direction: row;
+    background-color: 'F6F6F6';
+}

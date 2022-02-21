@@ -137,6 +137,18 @@ export const Theme = createTheme({
           borderRadius: 89.6,
           paddingBottom: 23.8,
           marginTop: 40,
+          '&.MuiNewsCard': {
+            width: '90%',
+            display: 'flex',
+            flexDirection: 'row',
+            boxShadow: 'none',
+            border: 'none',
+            padding: '30px 0px',
+            borderRadius: 0,
+            marginLeft: '40px',
+            marginRight: '40px',
+            borderBottom: '2px solid #00000029',
+          },
         },
       },
     },
@@ -144,6 +156,7 @@ export const Theme = createTheme({
   typography: {
     fontFamily: [
       'Poppins',
+      'Lato',
       'Helvetica',
       'Arial',
       'sans-serif',
@@ -169,6 +182,12 @@ export const Theme = createTheme({
       fontSize: 33,
       color: '#333333',
     },
+    h6: {
+      fontFamily: 'Lato',
+      fontWeight: 700,
+      fontSize: 20,
+      color: '#707070',
+    },
     body1: {
       fontWeight: 400,
       fontSize: 34,
@@ -180,7 +199,7 @@ export const Theme = createTheme({
     },
     body2: {
       fontFamily: 'Lato',
-      fontSize: 19.6,
+      fontSize: 20,
       color: '#707070',
       textAlign: 'center',
     },
