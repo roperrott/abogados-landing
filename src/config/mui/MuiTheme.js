@@ -38,7 +38,7 @@ export const Theme = createTheme({
     MuiTextField: {
       styleOverrides: {
         root: {
-          width: '48%',
+          minHeight: 155,
         },
       },
     },
