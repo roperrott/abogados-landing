@@ -1,6 +1,8 @@
+/* eslint-disable max-len */
 import {
-  Card, CardMedia, Typography, CardContent, CardActions,
+  Card, CardMedia, Typography, CardContent, CardActions, Box,
 } from '@mui/material';
+import defaultImg from '../../assets/informalWorkImg.jpg';
 import './index.css';
 
 export function NewsCard({
@@ -12,14 +14,30 @@ export function NewsCard({
         component="img"
         height="350px"
         width="400px"
-        image={img}
+        image={img ?? defaultImg}
         alt="Trabajo informal"
         style={{ borderRadius: 80 }}
       />
-      <CardContent sx={{ ml: '40px' }}>
+      <CardContent className="MuiNewsCardContent" sx={{ ml: '40px' }}>
         <Typography variant="h5">{title}</Typography>
         <Typography variant="h6">{subtitle}</Typography>
-        <Typography variant="body2" sx={{ textAlign: 'left' }}>{content}</Typography>
+        <Box
+          component="div"
+        >
+          <Typography
+            variant="body2"
+            sx={{
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              display: '-webkit-box',
+              '-webkit-line-clamp': '6',
+              '-webkit-box-orient': 'vertical',
+              textAlign: 'left',
+            }}
+          >
+            {content}
+          </Typography>
+        </Box>
       </CardContent>
       <CardActions />
     </Card>

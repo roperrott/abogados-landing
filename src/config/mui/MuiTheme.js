@@ -152,6 +152,22 @@ export const Theme = createTheme({
         },
       },
     },
+    MuiCardMedia: {
+      styleOverrides: {
+        root: {
+          maxWidth: 500,
+        },
+      },
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          '&.MuiNewsCardContent': {
+            height: 290,
+          },
+        },
+      },
+    },
   },
   typography: {
     fontFamily: [
