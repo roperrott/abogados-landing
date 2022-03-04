@@ -1,6 +1,8 @@
 import { Box, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { getDocs, collection } from 'firebase/firestore';
+import {
+  getDocs, collection, orderBy, query,
+} from 'firebase/firestore';
 import { NewsCard } from '../NewsCard';
 import { db } from '../../firebase';
 
@@ -9,7 +11,7 @@ export function NewsCardContainer() {
   useEffect(() => {
     const getNews = async () => {
       const newsTemp = [];
-      const querySnapshot = await getDocs(collection(db, 'news'));
+      const querySnapshot = await getDocs(query(collection(db, 'news'), orderBy('date', 'desc')));
       querySnapshot.forEach(
         (doc) => newsTemp.push(
           { ...doc.data(), date: doc.data().date.toDate().toDateString(), id: doc.id },
@@ -19,7 +21,6 @@ export function NewsCardContainer() {
     };
     getNews();
   }, []);
-  console.log(news);
   return (
     <Box sx={{
       width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center',
