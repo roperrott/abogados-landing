@@ -4,3 +4,12 @@
     flex-direction: row;
     background-color: 'F6F6F6';
 }
+
+.view-more{
+    display: block;
+    text-decoration: underline;
+}
+
+.view-more:hover{
+    cursor: pointer;
+}
