@@ -60,7 +60,7 @@ export function Form() {
               variant="outlined"
               size="normal"
               name="firstName"
-              style={{ width: '520px' }}
+              style={{ width: '45%' }}
               value={formik.values.firstName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -74,7 +74,7 @@ export function Form() {
               variant="outlined"
               size="normal"
               name="lastName"
-              style={{ width: '520px' }}
+              style={{ width: '45%' }}
               value={formik.values.lastName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -89,7 +89,7 @@ export function Form() {
               size="normal"
               name="phone"
               type="tel"
-              style={{ width: '520px' }}
+              style={{ width: '45%' }}
               value={formik.values.phone}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -103,7 +103,7 @@ export function Form() {
               margin="normal"
               variant="outlined"
               size="normal"
-              style={{ width: '520px' }}
+              style={{ width: '45%' }}
               value={formik.values.mail}
               name="mail"
               onChange={formik.handleChange}
