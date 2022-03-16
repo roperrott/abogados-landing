@@ -34,7 +34,7 @@ export function Form() {
   });
   return (
     <Box sx={{
-      backgroundColor: 'background.paper', height: '700px', mt: '420px',
+      backgroundColor: 'background.paper', height: '800px', mt: '420px',
     }}
     >
       <Box
@@ -60,6 +60,7 @@ export function Form() {
               variant="outlined"
               size="normal"
               name="firstName"
+              style={{ width: '520px' }}
               value={formik.values.firstName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -73,6 +74,7 @@ export function Form() {
               variant="outlined"
               size="normal"
               name="lastName"
+              style={{ width: '520px' }}
               value={formik.values.lastName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -87,6 +89,7 @@ export function Form() {
               size="normal"
               name="phone"
               type="tel"
+              style={{ width: '520px' }}
               value={formik.values.phone}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -100,6 +103,7 @@ export function Form() {
               margin="normal"
               variant="outlined"
               size="normal"
+              style={{ width: '520px' }}
               value={formik.values.mail}
               name="mail"
               onChange={formik.handleChange}
@@ -126,6 +130,7 @@ export function Form() {
             <Button color="secondary" variant="contained" size="medium" type="submit">
               {isLoading ? (
                 <CircularProgress
+                  color="success"
                   size={30}
                   sx={{
                     alignSelf: 'center',
