@@ -17,7 +17,7 @@ export function InfoCard({
           </div>
                   )}
       />
-      <CardContent sx={{ p: '0px 20px 8px', flexGrow: 1 }}>
+      <CardContent sx={{ p: '0px 12px 4px', flexGrow: 1 }}>
         <Typography variant="body2">{content}</Typography>
       </CardContent>
       <CardActions>
@@ -28,7 +28,7 @@ export function InfoCard({
           variant="contained"
           color="success"
           size="small"
-          startIcon={<WhatsAppIcon style={{ fontSize: 25 }} />}
+          startIcon={<WhatsAppIcon style={{ fontSize: 16 }} />}
         >
           CONSULTÁ GRATIS
 

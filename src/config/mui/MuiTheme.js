@@ -23,10 +23,10 @@ export const Theme = createTheme({
       styleOverrides: {
         root: {
           position: 'relative',
-          paddingBottom: 20,
-          paddingLeft: 10,
+          paddingBottom: 4,
+          paddingLeft: 4,
           fontWeight: 600,
-          fontSize: 21.7,
+          fontSize: 16,
           color: '#333333',
           transform: 'none',
           '&.Mui-focused': {
@@ -38,7 +38,7 @@ export const Theme = createTheme({
     MuiTextField: {
       styleOverrides: {
         root: {
-          minHeight: 155,
+          minHeight: 60,
         },
       },
     },
@@ -46,8 +46,8 @@ export const Theme = createTheme({
       styleOverrides: {
         root: {
           required: true,
-          height: 77,
-          fontSize: '23px',
+          height: 40,
+          fontSize: '16px',
           border: '1px solid #707070',
           '&.MuiOutlinedInput-root': {
             borderRadius: 60,
@@ -58,10 +58,10 @@ export const Theme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         input: {
-          padding: '16px 20px',
+          padding: '4px 8px',
         },
         multiline: {
-          height: 258,
+          height: 160,
         },
         notchedOutline: {
           border: 'none',
@@ -74,45 +74,45 @@ export const Theme = createTheme({
           borderRadius: 0,
           borderWidth: 2,
           borderColor: '#FFFFFF',
-          height: 35,
-          padding: '0px 25px',
+          height: 28,
+          padding: '0px 16px',
           boxShadow: '0px 3px 6px #00000029',
           ':hover': {
             borderRadius: 0,
             borderWidth: 2,
           },
           '&.MuiButton-sizeLarge ': {
-            borderRadius: 9.8,
-            height: 57.5,
-            fontSize: 20,
+            borderRadius: 8,
+            height: 36,
+            fontSize: 12,
             borderWidth: 1,
             fontWeight: 500,
           },
         },
         contained: {
-          borderRadius: 19,
+          borderRadius: 12,
           border: '1px solid #707070',
           '&.MuiButton-containedSizeMedium': {
-            height: 80,
-            padding: '0px 86px',
-            fontSize: 35,
+            height: 44,
+            padding: '0px 60px',
+            fontSize: 24,
           },
           '&.MuiButton-containedSizeLarge': {
-            minHeight: 107,
+            minHeight: 72,
             padding: '0px 32px',
-            fontSize: 35,
-            borderRadius: 10,
+            fontSize: 20,
+            borderRadius: 8,
             boxShadow: '0px 3px 6px #00000029',
             border: 'none',
           },
           '&.MuiButton-containedSizeSmall': {
-            height: 47.6,
-            borderRadius: 21,
-            fontSize: 14.7,
+            height: 32,
+            borderRadius: 16,
+            fontSize: 12,
             fontWeight: 600,
             border: 'none',
             color: '#FFFFFF',
-            padding: '0px 14px',
+            padding: '0px 8px',
           },
         },
       },
@@ -120,7 +120,7 @@ export const Theme = createTheme({
     MuiSvgIcon: {
       root: {
         '&.MuiButton-startIcon': {
-          fontSize: 23,
+          fontSize: 16,
         },
       },
     },
@@ -128,22 +128,22 @@ export const Theme = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: '#FFFFFF',
-          width: 365,
+          width: 280,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           boxShadow: '0px 3px 6px #00000029',
           justifyContent: 'baselined',
-          borderRadius: 89.6,
-          paddingBottom: 23.8,
-          marginTop: 40,
+          borderRadius: 64,
+          paddingBottom: 16,
+          marginTop: 28,
           '&.MuiNewsCard': {
             width: '90%',
             display: 'flex',
             flexDirection: 'row',
             boxShadow: 'none',
             border: 'none',
-            padding: '30px 0px',
+            padding: '20px 0px',
             borderRadius: 0,
             marginLeft: '40px',
             marginRight: '40px',
@@ -155,7 +155,7 @@ export const Theme = createTheme({
     MuiCardMedia: {
       styleOverrides: {
         root: {
-          maxWidth: 500,
+          maxWidth: 352,
         },
       },
     },
@@ -163,7 +163,7 @@ export const Theme = createTheme({
       styleOverrides: {
         root: {
           '&.MuiNewsCardContent': {
-            height: 290,
+            height: 204,
           },
         },
       },
@@ -179,43 +179,43 @@ export const Theme = createTheme({
     ].join(','),
     h1: {
       fontWeight: 600,
-      fontSize: 70,
+      fontSize: 48,
     },
     h2: {
       fontWeight: 600,
-      fontSize: 50,
+      fontSize: 32,
     },
     h3: {
       fontWeight: 700,
-      fontSize: 47,
+      fontSize: 32,
     },
     h4: {
       fontFamily: 'Helvetica',
-      fontSize: 18,
+      fontSize: 16,
     },
     h5: {
       fontWeight: 500,
-      fontSize: 33,
+      fontSize: 20,
       color: '#333333',
     },
     h6: {
       fontFamily: 'Lato',
       fontWeight: 700,
-      fontSize: 20,
+      fontSize: 16,
       color: '#707070',
     },
     body1: {
       fontWeight: 400,
-      fontSize: 34,
+      fontSize: 24,
       '&.MuiListItemText-primary': {
-        fontSize: 21,
+        fontSize: 16,
         fontWeight: 600,
         color: '#FFFFFF',
       },
     },
     body2: {
       fontFamily: 'Lato',
-      fontSize: 20,
+      fontSize: 16,
       color: '#707070',
       textAlign: 'center',
     },
