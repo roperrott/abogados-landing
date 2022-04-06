@@ -66,7 +66,7 @@ export function NewsCardContainer() {
     }}
     >
       { loading
-        ? (<CircularProgress color="success" size={30} sx={{ m: '35vh auto' }} />)
+        ? (<CircularProgress color="success" size={30} sx={{ m: '24vh auto' }} />)
         : news.length > 0
           ? (news.map((data) => (
             <NewsCard
@@ -79,17 +79,17 @@ export function NewsCardContainer() {
           )
           : (
             <Box className="not-found-container">
-              <Typography variant="h2" color="secondary" sx={{ pt: '200px', textAlign: 'center' }}>Aún no hay noticias disponibles</Typography>
+              <Typography variant="h2" color="secondary" sx={{ pt: '140px', textAlign: 'center' }}>Aún no hay noticias disponibles</Typography>
             </Box>
           )}
       { loadingMore
-        ? (<CircularProgress color="success" size={30} sx={{ m: '15px auto' }} />)
+        ? (<CircularProgress color="success" size={20} sx={{ m: '12px auto' }} />)
         : (
           <Button
             variant="text"
             size="small"
             style={{
-              fontSize: 20, padding: '0px 35px', borderRadius: 40, margin: 20, color: '#333333',
+              fontSize: 16, padding: '0px 24px', borderRadius: 28, margin: 12, color: '#333333',
             }}
             onClick={fetchMore}
             disabled={loadingMore}

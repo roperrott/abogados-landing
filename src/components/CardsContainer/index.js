@@ -6,7 +6,7 @@ import './index.css';
 
 export function CardsContainer() {
   return (
-    <Box className="cards-container" sx={{ m: '40px 64px' }}>
+    <Box className="cards-container" sx={{ m: '28px 120px' }}>
       {
                 cardsData.map((data) => <InfoCard key={data.title} {...data} />)
             }

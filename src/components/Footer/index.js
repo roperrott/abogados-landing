@@ -9,11 +9,11 @@ import { itemsListData } from '../../data/itemsListData';
 export function Footer() {
   return (
     <Box className="footer-container">
-      <Box sx={{ width: 301 }}>
+      <Box sx={{ width: 232 }}>
         <Typography
           paragraph
           sx={{
-            fontSize: 21.7, fontWeight: 600, color: '#FFFFFF', textAlign: 'left', mb: 0,
+            fontSize: 16, fontWeight: 600, color: '#FFFFFF', textAlign: 'left', mb: 0,
           }}
         >
           SOMOS ESPECIALISTAS EN
@@ -26,11 +26,11 @@ export function Footer() {
           ))}
         </List>
       </Box>
-      <Box sx={{ width: 490 }}>
+      <Box sx={{ width: 352 }}>
         <Typography
           paragraph
           sx={{
-            fontSize: 19, fontWeight: 500, color: '#FFFFFF', textAlign: 'left', mb: 0,
+            fontSize: 12, fontWeight: 500, color: '#FFFFFF', textAlign: 'left', mb: 0,
           }}
         >
           Centro de la Provincia de Buenos Aires
@@ -38,7 +38,7 @@ export function Footer() {
         <Typography
           paragraph
           sx={{
-            fontSize: 17, fontWeight: 400, color: '#FFFFFF', textAlign: 'left', mb: 3,
+            fontSize: 12, fontWeight: 400, color: '#FFFFFF', textAlign: 'left', mb: 3,
           }}
         >
           Tandil, Azul, Olavarría, Mar del Plata, Necochea, Dolores, Balcarce y ciudades aledañas
@@ -49,7 +49,7 @@ export function Footer() {
           rel="noopener noreferrer"
           variant="outlined"
           size="large"
-          endIcon={<WhatsappTwoToneIcon style={{ fontSize: 25 }} />}
+          endIcon={<WhatsappTwoToneIcon style={{ fontSize: 16 }} />}
         >
           CONTACTANOS
 

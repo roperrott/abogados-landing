@@ -45,14 +45,14 @@ export function NewsCard({
     <Card className="MuiNewsCard" variant="outlined" style={{ backgroundColor: '#F6F6F6' }}>
       <CardMedia
         component="img"
-        height="350px"
-        width="400px"
+        height="244px"
+        width="280px"
         image={img ?? defaultImg}
         alt="Trabajo informal"
-        style={{ borderRadius: 80 }}
+        style={{ borderRadius: 56 }}
         sx={{ marginBottom: 'auto' }}
       />
-      <CardContent className="MuiNewsCardContent" sx={{ ml: '40px' }} style={{ height: textHeight }}>
+      <CardContent className="MuiNewsCardContent" sx={{ ml: '28px' }} style={{ height: textHeight }}>
         <Typography variant="h5">{title}</Typography>
         <Typography variant="h6">{subtitle}</Typography>
         <Box

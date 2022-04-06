@@ -34,22 +34,22 @@ export function Form() {
   });
   return (
     <Box sx={{
-      backgroundColor: 'background.paper', height: '800px', mt: '420px',
+      backgroundColor: 'background.paper', height: '560px', mt: '292px',
     }}
     >
       <Box
         id="contact-form"
         sx={{
-          bgcolor: '#FFFFFF', alignItems: 'center', p: '78px 88px 40px', m: '-346px 47.5px 0px', borderRadius: '92px', position: 'absolute', display: 'flex', flexDirection: 'column',
+          bgcolor: '#FFFFFF', alignItems: 'center', p: '60px 80px 28px', m: '-244px 80px 0px', borderRadius: '64px', position: 'absolute', display: 'flex', flexDirection: 'column',
         }}
       >
         <Typography variant="h5" sx={{ textAlign: 'center' }}>COMPLETÁ EL FORMULARIO PARA QUE TE CONTACTEMOS</Typography>
-        <Typography paragraph className="subtitle" sx={{ fontSize: '42px', fontWeight: '600' }}>¡Y RESOLVAMOS JUNTOS!</Typography>
+        <Typography paragraph className="subtitle" sx={{ fontSize: '28px', fontWeight: '600' }}>¡Y RESOLVAMOS JUNTOS!</Typography>
         <form onSubmit={formik.handleSubmit} className="contact-form">
           <FormControl
             fullWidth
             sx={{
-              alignItems: 'center', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', mb: '40px',
+              alignItems: 'center', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', mb: '28px',
             }}
           >
             <TextField
@@ -131,7 +131,7 @@ export function Form() {
               {isLoading ? (
                 <CircularProgress
                   color="success"
-                  size={30}
+                  size={20}
                   sx={{
                     alignSelf: 'center',
                   }}
