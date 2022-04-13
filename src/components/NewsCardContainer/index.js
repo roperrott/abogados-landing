@@ -84,7 +84,7 @@ export function NewsCardContainer() {
           )}
       { loadingMore
         ? (<CircularProgress color="success" size={20} sx={{ m: '12px auto' }} />)
-        : (
+        : !!news.length > 0 && (
           <Button
             variant="text"
             size="small"
