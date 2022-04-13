@@ -40,7 +40,7 @@ export function Form() {
       <Box
         id="contact-form"
         sx={{
-          bgcolor: '#FFFFFF', alignItems: 'center', p: '60px 80px 28px', m: '-244px 80px 0px', borderRadius: '64px', position: 'absolute', display: 'flex', flexDirection: 'column',
+          bgcolor: '#FFFFFF', alignItems: 'center', p: '60px 80px 28px', m: '-244px 80px 0px', borderRadius: '64px', position: 'absolute', display: 'flex', flexDirection: 'column', right: 0, left: 0,
         }}
       >
         <Typography variant="h5" sx={{ textAlign: 'center' }}>COMPLETÁ EL FORMULARIO PARA QUE TE CONTACTEMOS</Typography>
