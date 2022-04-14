@@ -14,6 +14,9 @@ export function NewsCardContainer() {
   const [lastNews, setLastNews] = useState();
   const [loading, setLoading] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
+  const options = {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+  };
 
   useEffect(() => {
     const getNews = async () => {
@@ -23,7 +26,7 @@ export function NewsCardContainer() {
         const querySnapshot = await getDocs(query(collection(db, 'news'), orderBy('date', 'desc'), limit(5)));
         querySnapshot.forEach(
           (doc) => newsTemp.push(
-            { ...doc.data(), date: doc.data().date.toDate().toDateString(), id: doc.id },
+            { ...doc.data(), date: doc.data().date.toDate().toLocaleString('es-AR', options), id: doc.id },
           ),
         );
         const lastVisible = querySnapshot.docs[querySnapshot.docs.length - 1];
@@ -46,7 +49,7 @@ export function NewsCardContainer() {
       const querySnapshot = await getDocs(query(collection(db, 'news'), orderBy('date', 'desc'), startAfter(lastNews), limit(5)));
       querySnapshot.forEach(
         (doc) => newsTemp.push(
-          { ...doc.data(), date: doc.data().date.toDate().toDateString(), id: doc.id },
+          { ...doc.data(), date: doc.data().date.toDate().toLocaleString('es-AR', options), id: doc.id },
         ),
       );
       const lastVisible = querySnapshot.docs[querySnapshot.docs.length - 1];
