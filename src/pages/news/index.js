@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import {
   Banner, Header, Footer,
 } from '../../components';
-import BannerNews from '../../assets/banner_news.jpeg';
+import BannerNews from '../../assets/banner_news.webp';
 import { NewsCardContainer } from '../../components/NewsCardContainer';
 
 export function News() {
