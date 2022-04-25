@@ -1,5 +1,5 @@
 import {
-  Box, Typography, TextField, FormControl, Button, Snackbar, Alert, CircularProgress,
+  Box, Typography, TextField, FormControl, Button, Snackbar, Alert, CircularProgress, Grid,
 } from '@mui/material';
 import { useFormik } from 'formik';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
@@ -33,18 +33,44 @@ export function Form() {
     onSubmit: (values) => onSendData(values),
   });
   return (
-    <Box sx={{
-      backgroundColor: 'background.paper', height: '560px', mt: '292px',
-    }}
-    >
+    <Box sx={{ position: 'relative', height: { xs: '1050px', md: '800px' } }}>
+      <Box sx={{
+        height: '40%',
+      }}
+      />
+      <Box sx={{
+        backgroundColor: 'background.paper', height: '60%',
+      }}
+      >
+        <Snackbar
+          open={showSuccessAlert}
+          autoHideDuration={3000}
+        >
+          <Alert onClose={() => setShowSuccessAlert(false)} severity="success" sx={{ width: '100%' }}>
+            La consulta se envió con éxito!
+          </Alert>
+        </Snackbar>
+        <Snackbar
+          open={showErrorAlert}
+          autoHideDuration={3000}
+        >
+          <Alert onClose={() => setShowErrorAlert(false)} severity="error" sx={{ width: '100%' }}>
+            Hubo un error
+          </Alert>
+        </Snackbar>
+      </Box>
       <Box
+        justify="center"
+        align="center"
         id="contact-form"
         sx={{
-          bgcolor: '#FFFFFF', alignItems: 'center', p: '60px 80px 28px', m: '-244px 80px 0px', borderRadius: '64px', position: 'absolute', display: 'flex', flexDirection: 'column', right: 0, left: 0,
+          position: 'absolute', height: 'auto', bgcolor: '#FFFFFF', alignItems: 'center', p: { xs: '24px 40px 28px', md: '60px 80px 28px' }, m: '0px 20px 0px', borderRadius: '64px', display: 'flex', flexDirection: 'column', bottom: 20,
         }}
       >
         <Typography variant="h5" sx={{ textAlign: 'center' }}>COMPLETÁ EL FORMULARIO PARA QUE TE CONTACTEMOS</Typography>
+
         <Typography paragraph className="subtitle" sx={{ fontSize: '28px', fontWeight: '600' }}>¡Y RESOLVAMOS JUNTOS!</Typography>
+
         <form onSubmit={formik.handleSubmit} className="contact-form">
           <FormControl
             fullWidth
@@ -52,79 +78,91 @@ export function Form() {
               alignItems: 'center', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', mb: '28px',
             }}
           >
-            <TextField
-              required
-              label="Nombre"
-              InputLabelProps={{ shrink: false }}
-              margin="normal"
-              variant="outlined"
-              size="normal"
-              name="firstName"
-              style={{ width: '45%' }}
-              value={formik.values.firstName}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              helperText={formik.touched.firstName && formik.errors.firstName}
-            />
-            <TextField
-              required
-              label="Apellido"
-              InputLabelProps={{ shrink: false }}
-              margin="normal"
-              variant="outlined"
-              size="normal"
-              name="lastName"
-              style={{ width: '45%' }}
-              value={formik.values.lastName}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              helperText={formik.touched.lastName && formik.errors.lastName}
-            />
-            <TextField
-              required
-              label="Teléfono"
-              InputLabelProps={{ shrink: false }}
-              margin="normal"
-              variant="outlined"
-              size="normal"
-              name="phone"
-              type="tel"
-              style={{ width: '45%' }}
-              value={formik.values.phone}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              helperText={formik.touched.phone && formik.errors.phone}
-            />
-            <TextField
-              required
-              label="Email"
-              type="email"
-              InputLabelProps={{ shrink: false }}
-              margin="normal"
-              variant="outlined"
-              size="normal"
-              style={{ width: '45%' }}
-              value={formik.values.mail}
-              name="mail"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              helperText={formik.touched.mail && formik.errors.mail}
-            />
-            <TextField
-              required
-              multiline
-              label="Consulta"
-              InputLabelProps={{ shrink: false }}
-              margin="normal"
-              variant="outlined"
-              rows={6}
-              style={{ width: '100%' }}
-              value={formik.values.content}
-              name="content"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              helperText={formik.touched.content && formik.errors.content}
-            />
+            <Grid container spacing={{ xs: 4, md: 4 }} columns={{ xs: 12, md: 4 }}>
+              <Grid item xs={12} md={2}>
+                <TextField
+                  required
+                  label="Nombre"
+                  InputLabelProps={{ shrink: false }}
+                  margin="normal"
+                  variant="outlined"
+                  size="normal"
+                  fullWidth
+                  name="firstName"
+                  value={formik.values.firstName}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  helperText={formik.touched.firstName && formik.errors.firstName}
+                />
+              </Grid>
+              <Grid item xs={12} md={2}>
+                <TextField
+                  required
+                  label="Apellido"
+                  InputLabelProps={{ shrink: false }}
+                  margin="normal"
+                  variant="outlined"
+                  size="normal"
+                  fullWidth
+                  name="lastName"
+                  value={formik.values.lastName}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  helperText={formik.touched.lastName && formik.errors.lastName}
+                />
+              </Grid>
+              <Grid item xs={12} md={2}>
+                <TextField
+                  required
+                  label="Teléfono"
+                  InputLabelProps={{ shrink: false }}
+                  margin="normal"
+                  variant="outlined"
+                  size="normal"
+                  name="phone"
+                  fullWidth
+                  type="tel"
+                  value={formik.values.phone}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  helperText={formik.touched.phone && formik.errors.phone}
+                />
+              </Grid>
+              <Grid item xs={12} md={2}>
+                <TextField
+                  fullWidth
+                  required
+                  label="Email"
+                  type="email"
+                  InputLabelProps={{ shrink: false }}
+                  margin="normal"
+                  variant="outlined"
+                  size="normal"
+                  value={formik.values.mail}
+                  name="mail"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  helperText={formik.touched.mail && formik.errors.mail}
+                />
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <TextField
+                  required
+                  multiline
+                  label="Consulta"
+                  InputLabelProps={{ shrink: false }}
+                  margin="normal"
+                  variant="outlined"
+                  rows={6}
+                  fullWidth
+                  value={formik.values.content}
+                  name="content"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  helperText={formik.touched.content && formik.errors.content}
+                />
+              </Grid>
+            </Grid>
           </FormControl>
           <Box sx={{ textAlign: 'center' }}>
             <Button color="secondary" variant="contained" size="medium" type="submit">
@@ -142,22 +180,6 @@ export function Form() {
           </Box>
         </form>
       </Box>
-      <Snackbar
-        open={showSuccessAlert}
-        autoHideDuration={3000}
-      >
-        <Alert onClose={() => setShowSuccessAlert(false)} severity="success" sx={{ width: '100%' }}>
-          La consulta se envió con éxito!
-        </Alert>
-      </Snackbar>
-      <Snackbar
-        open={showErrorAlert}
-        autoHideDuration={3000}
-      >
-        <Alert onClose={() => setShowErrorAlert(false)} severity="error" sx={{ width: '100%' }}>
-          Hubo un error
-        </Alert>
-      </Snackbar>
     </Box>
   );
 }
