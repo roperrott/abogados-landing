@@ -1,5 +1,5 @@
 import {
-  Box, Button, List, ListItem, ListItemText, Typography,
+  Button, Grid, List, ListItem, ListItemText, Typography,
 } from '@mui/material';
 import WhatsappTwoToneIcon from '@mui/icons-material/WhatsappTwoTone';
 import logo from '../../assets/logo.svg';
@@ -8,8 +8,8 @@ import { itemsListData } from '../../data/itemsListData';
 
 export function Footer() {
   return (
-    <Box className="footer-container">
-      <Box sx={{ width: 232 }}>
+    <Grid container spacing={{ xs: 0, md: 12 }} columns={{ xs: 12, md: 6 }} className="footer-container">
+      <Grid item xs={12} md={2}>
         <Typography
           paragraph
           sx={{
@@ -25,8 +25,8 @@ export function Footer() {
             </ListItem>
           ))}
         </List>
-      </Box>
-      <Box sx={{ width: 352 }}>
+      </Grid>
+      <Grid item xs={12} md={2}>
         <Typography
           paragraph
           sx={{
@@ -54,10 +54,10 @@ export function Footer() {
           CONTACTANOS
 
         </Button>
-      </Box>
-      <Box>
+      </Grid>
+      <Grid item xs={12} md={2} sx={{ textAlign: 'center' }}>
         <img src={logo} className="footer-img" alt="Logo abogados Web" />
-      </Box>
-    </Box>
+      </Grid>
+    </Grid>
   );
 }

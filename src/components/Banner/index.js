@@ -10,7 +10,7 @@ export function Banner({
   return (
     <Box sx={{ position: 'relative' }}>
       <Box className="banner" style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <Box className="banner-container">
+        <Box className="banner-container" sx={{ height: { xs: 210, md: 176 } }}>
           <Box className="title-container">
             <Typography variant="h1" color="primary">
               {title}

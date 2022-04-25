@@ -1,4 +1,7 @@
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 import { createTheme } from '@mui/material/styles';
+
+const breakpoints = createBreakpoints({});
 
 export const Theme = createTheme({
   palette: {
@@ -104,6 +107,7 @@ export const Theme = createTheme({
             borderRadius: 8,
             boxShadow: '0px 3px 6px #00000029',
             border: 'none',
+            margin: '0 20px',
           },
           '&.MuiButton-containedSizeSmall': {
             height: 32,
@@ -180,6 +184,9 @@ export const Theme = createTheme({
     h1: {
       fontWeight: 600,
       fontSize: 48,
+      [breakpoints.down('sm')]: {
+        fontSize: 40,
+      },
     },
     h2: {
       fontWeight: 600,
