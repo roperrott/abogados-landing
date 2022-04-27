@@ -13,12 +13,13 @@ export function Form() {
   const [showErrorAlert, setShowErrorAlert] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const onSendData = async (values) => {
+  const onSendData = async (values, resetForm) => {
     setIsLoading(true);
     try {
       await addDoc(collection(db, 'queries'), { ...values, date: Timestamp.fromDate(new Date()) });
       setShowSuccessAlert(true);
       setIsLoading(false);
+      resetForm();
     } catch (e) {
       setShowErrorAlert(true);
       setIsLoading(false);
@@ -30,7 +31,7 @@ export function Form() {
       firstName: '', lastName: '', phone: '', mail: '', content: '',
     },
     validationSchema,
-    onSubmit: (values) => onSendData(values),
+    onSubmit: (values, { resetForm }) => onSendData(values, resetForm),
   });
   return (
     <Box sx={{ position: 'relative', height: { xs: '1050px', md: '800px' } }}>
@@ -64,7 +65,7 @@ export function Form() {
         align="center"
         id="contact-form"
         sx={{
-          position: 'absolute', height: 'auto', bgcolor: '#FFFFFF', alignItems: 'center', p: { xs: '24px 40px 28px', md: '60px 80px 28px' }, m: '0px 20px 0px', borderRadius: '64px', display: 'flex', flexDirection: 'column', bottom: 20,
+          position: 'absolute', height: 'auto', bgcolor: '#FFFFFF', alignItems: 'center', p: { xs: '24px 40px 28px', md: '60px 80px 28px' }, m: { xs: '0px 20px', md: '0px 80px' }, borderRadius: '64px', display: 'flex', flexDirection: 'column', bottom: 40, left: 0, right: 0,
         }}
       >
         <Typography variant="h5" sx={{ textAlign: 'center' }}>COMPLETÁ EL FORMULARIO PARA QUE TE CONTACTEMOS</Typography>
@@ -165,7 +166,7 @@ export function Form() {
             </Grid>
           </FormControl>
           <Box sx={{ textAlign: 'center' }}>
-            <Button color="secondary" variant="contained" size="medium" type="submit">
+            <Button color="secondary" variant="contained" size="medium" type="submit" disabled={!formik.isValid}>
               {isLoading ? (
                 <CircularProgress
                   color="success"

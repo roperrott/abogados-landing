@@ -53,7 +53,8 @@ export const Theme = createTheme({
           fontSize: '16px',
           border: '1px solid #707070',
           '&.MuiOutlinedInput-root': {
-            borderRadius: 60,
+            borderRadius: 40,
+            padding: 16,
           },
         },
       },
