@@ -34,7 +34,7 @@ export function Form() {
     onSubmit: (values, { resetForm }) => onSendData(values, resetForm),
   });
   return (
-    <Box sx={{ position: 'relative', height: { xs: '1050px', md: '800px' } }}>
+    <Box sx={{ position: 'relative', height: { xs: '1070px', md: '820px' } }}>
       <Box sx={{
         height: '40%',
       }}

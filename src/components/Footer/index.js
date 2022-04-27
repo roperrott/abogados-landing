@@ -30,7 +30,7 @@ export function Footer() {
         <Typography
           paragraph
           sx={{
-            fontSize: 12, fontWeight: 500, color: '#FFFFFF', textAlign: 'left', mb: 0,
+            fontSize: 20, fontWeight: 500, color: '#FFFFFF', textAlign: 'left', mb: 0,
           }}
         >
           Centro de la Provincia de Buenos Aires
@@ -38,7 +38,7 @@ export function Footer() {
         <Typography
           paragraph
           sx={{
-            fontSize: 12, fontWeight: 400, color: '#FFFFFF', textAlign: 'left', mb: 3,
+            fontSize: 16, fontWeight: 400, color: '#FFFFFF', textAlign: 'left', mb: 3,
           }}
         >
           Tandil, Azul, Olavarría, Mar del Plata, Necochea, Dolores, Balcarce y ciudades aledañas
