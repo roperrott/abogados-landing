@@ -12,7 +12,7 @@ export function Header({ buttonTitle, linkTo }) {
           <Logo />
         </Link>
         <Typography variant="h4" component="div" color="primary" sx={{ flexGrow: 1 }}>
-          0800-888-6930 (24hs) 11-5115-8183 Consultas todos los días, las 24hs. Sin Cargo
+          0800-888-6930 / 11-5115-8183 consultas todos los días las 24hs, sin cargo.
         </Typography>
         <Link to={linkTo}>
           <Button variant="outlined" color="primary">{buttonTitle}</Button>

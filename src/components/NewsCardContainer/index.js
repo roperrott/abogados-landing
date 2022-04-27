@@ -97,7 +97,7 @@ export function NewsCardContainer() {
             onClick={fetchMore}
             disabled={loadingMore}
           >
-            Ver más
+            Ver más noticias
           </Button>
         )}
     </Box>

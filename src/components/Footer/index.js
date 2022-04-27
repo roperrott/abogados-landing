@@ -8,8 +8,8 @@ import { itemsListData } from '../../data/itemsListData';
 
 export function Footer() {
   return (
-    <Grid container spacing={{ xs: 0, md: 12 }} columns={{ xs: 12, md: 6 }} className="footer-container">
-      <Grid item xs={12} md={2}>
+    <Grid container spacing={{ xs: 0, md: 0 }} columns={{ xs: 6, md: 3 }} className="footer-container">
+      <Grid item xs={12} md={1} className="footer-item">
         <Typography
           paragraph
           sx={{
@@ -26,7 +26,7 @@ export function Footer() {
           ))}
         </List>
       </Grid>
-      <Grid item xs={12} md={2}>
+      <Grid item xs={12} md={1} className="footer-item">
         <Typography
           paragraph
           sx={{
@@ -55,7 +55,7 @@ export function Footer() {
 
         </Button>
       </Grid>
-      <Grid item xs={12} md={2} sx={{ textAlign: 'center' }}>
+      <Grid item xs={12} md={1} sx={{ textAlign: 'center' }} className="footer-item">
         <img src={logo} className="footer-img" alt="Logo abogados Web" />
       </Grid>
     </Grid>

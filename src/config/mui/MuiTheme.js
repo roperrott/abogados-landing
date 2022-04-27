@@ -108,6 +108,9 @@ export const Theme = createTheme({
             boxShadow: '0px 3px 6px #00000029',
             border: 'none',
             margin: '0 20px',
+            [breakpoints.down('sm')]: {
+              fontSize: 16,
+            },
           },
           '&.MuiButton-containedSizeSmall': {
             height: 32,
@@ -152,6 +155,9 @@ export const Theme = createTheme({
             marginLeft: '40px',
             marginRight: '40px',
             borderBottom: '2px solid #00000029',
+            [breakpoints.down('sm')]: {
+              flexDirection: 'column',
+            },
           },
         },
       },
@@ -160,15 +166,6 @@ export const Theme = createTheme({
       styleOverrides: {
         root: {
           maxWidth: 352,
-        },
-      },
-    },
-    MuiCardContent: {
-      styleOverrides: {
-        root: {
-          '&.MuiNewsCardContent': {
-            height: 204,
-          },
         },
       },
     },

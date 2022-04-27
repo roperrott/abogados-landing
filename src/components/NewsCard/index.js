@@ -52,7 +52,7 @@ export function NewsCard({
         style={{ borderRadius: 56 }}
         sx={{ marginBottom: 'auto' }}
       />
-      <CardContent className="MuiNewsCardContent" sx={{ ml: '28px' }} style={{ height: textHeight }}>
+      <CardContent className="MuiNewsCardContent" sx={{ ml: { md: '28px' } }} style={{ height: textHeight }}>
         <Typography variant="h5">{title}</Typography>
         <Typography variant="h6">{subtitle}</Typography>
         <Box
