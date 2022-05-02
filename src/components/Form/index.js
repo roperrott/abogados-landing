@@ -65,7 +65,7 @@ export function Form() {
         align="center"
         id="contact-form"
         sx={{
-          position: 'absolute', height: 'auto', bgcolor: '#FFFFFF', alignItems: 'center', p: { xs: '24px 40px 28px', md: '60px 80px 28px' }, m: { xs: '0px 20px', md: '0px 80px' }, borderRadius: '64px', display: 'flex', flexDirection: 'column', bottom: 40, left: 0, right: 0,
+          position: 'absolute', height: 'auto', maxWidth: 700, bgcolor: '#FFFFFF', alignItems: 'center', p: { xs: '24px 40px 28px', md: '60px 80px 28px' }, m: { xs: '0px 20px', md: '0px auto' }, borderRadius: '64px', display: 'flex', flexDirection: 'column', bottom: 40, left: 0, right: 0,
         }}
       >
         <Typography variant="h5" sx={{ textAlign: 'center' }}>COMPLETÁ EL FORMULARIO PARA QUE TE CONTACTEMOS</Typography>

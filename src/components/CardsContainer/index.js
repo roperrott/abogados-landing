@@ -5,8 +5,13 @@ import { cardsData } from '../../data/cardsData';
 
 export function CardsContainer() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid justify="center" align="center" container spacing={{ xs: 2, md: 2 }} columns={{ xs: 1, sm: 8, md: 12 }}>
+    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Grid
+        container
+        spacing={{ xs: 2, md: 2 }}
+        columns={{ xs: 1, sm: 8, md: 12 }}
+        sx={{ maxWidth: 1200 }}
+      >
         {
                 cardsData.map((data) => (
                   <Grid item xs={2} sm={4} md={4} key={data.title} style={{ display: 'flex', justifyContent: 'center' }}>

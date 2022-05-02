@@ -17,7 +17,7 @@ export function InfoCard({
           </div>
                   )}
       />
-      <CardContent sx={{ p: '0px 12px 4px', flexGrow: 1 }}>
+      <CardContent sx={{ p: '0px 24px 4px', flexGrow: 1 }}>
         <Typography variant="body2">{content}</Typography>
       </CardContent>
       <CardActions>

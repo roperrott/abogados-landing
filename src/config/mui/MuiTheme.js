@@ -136,17 +136,17 @@ export const Theme = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: '#FFFFFF',
-          width: 280,
+          maxWidth: 330,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           boxShadow: '0px 3px 6px #00000029',
-          justifyContent: 'baselined',
-          borderRadius: 64,
+          borderRadius: 56,
           paddingBottom: 16,
           marginTop: 28,
           '&.MuiNewsCard': {
             width: '90%',
+            maxWidth: 1300,
             display: 'flex',
             flexDirection: 'row',
             boxShadow: 'none',

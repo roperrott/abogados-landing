@@ -3,7 +3,7 @@ import {
   Card, CardMedia, Typography, CardContent, CardActions, Box,
 } from '@mui/material';
 import { useEffect, useState, useRef } from 'react';
-import defaultImg from '../../assets/informalWorkImg.jpg';
+import defaultImg from '../../assets/logo.svg';
 import './index.css';
 
 export function NewsCard({
@@ -45,7 +45,7 @@ export function NewsCard({
     <Card className="MuiNewsCard" variant="outlined" style={{ backgroundColor: '#F6F6F6' }}>
       <CardMedia
         component="img"
-        height="244px"
+        height="300px"
         width="280px"
         image={img ?? defaultImg}
         alt="Trabajo informal"
