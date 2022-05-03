@@ -11,7 +11,7 @@ export function Header({ buttonTitle, linkTo }) {
         <Link to="/">
           <Logo />
         </Link>
-        <Typography variant="h4" component="div" color="primary" sx={{ flexGrow: 1 }}>
+        <Typography variant="h4" component="div" color="primary" sx={{ flexGrow: 1, padding: '0px 8px' }}>
           (249) 4025191 consultas todos los días las 24hs, sin cargo.
         </Typography>
         <Link to={linkTo}>
